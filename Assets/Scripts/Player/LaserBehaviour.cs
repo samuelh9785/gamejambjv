@@ -24,7 +24,7 @@ public class LaserBehaviour : MonoBehaviour, IInteractable
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag(PLAYER_TAG) || collision.CompareTag(INTERACTABLE_TAG))
-            collision.GetComponent<IInteractable>().Interaction(this);
+            collision.GetComponent<IInteractable>().StopInteraction(this);
     }
 
     public void ShootLaser()

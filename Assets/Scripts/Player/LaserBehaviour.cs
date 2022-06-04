@@ -41,7 +41,7 @@ public class LaserBehaviour : MonoBehaviour, IInteractable
     public void ResetLaser()
     {
         currentSize = 0;
-        transform.localScale = new Vector3(Mathf.Lerp(transform.position.y, 0, Time.deltaTime), transform.localScale.y, 1);
+        transform.localScale = new Vector3(Mathf.Lerp(transform.localScale.x, 0, Time.deltaTime * 5), transform.localScale.y, 1);
     }
 
     public void Interaction(LaserBehaviour laser)

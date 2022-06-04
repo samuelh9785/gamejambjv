@@ -124,7 +124,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""37204f24-d398-42db-af12-7b768f88dc7c"",
-                    ""path"": ""<XInputController>/buttonSouth"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""GamePad"",
@@ -175,6 +175,17 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
             ""devices"": [
                 {
                     ""devicePath"": ""<Gamepad>"",
+                    ""isOptional"": true,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""KeyboardAlt"",
+            ""bindingGroup"": ""KeyboardAlt"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
                     ""isOptional"": true,
                     ""isOR"": false
                 }
@@ -297,6 +308,15 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         {
             if (m_GamePadSchemeIndex == -1) m_GamePadSchemeIndex = asset.FindControlSchemeIndex("GamePad");
             return asset.controlSchemes[m_GamePadSchemeIndex];
+        }
+    }
+    private int m_KeyboardAltSchemeIndex = -1;
+    public InputControlScheme KeyboardAltScheme
+    {
+        get
+        {
+            if (m_KeyboardAltSchemeIndex == -1) m_KeyboardAltSchemeIndex = asset.FindControlSchemeIndex("KeyboardAlt");
+            return asset.controlSchemes[m_KeyboardAltSchemeIndex];
         }
     }
     public interface IPlayerActions

@@ -111,7 +111,7 @@
                 {
                     "name": "",
                     "id": "37204f24-d398-42db-af12-7b768f88dc7c",
-                    "path": "<XInputController>/buttonSouth",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "GamePad",
@@ -162,6 +162,17 @@
             "devices": [
                 {
                     "devicePath": "<Gamepad>",
+                    "isOptional": true,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "KeyboardAlt",
+            "bindingGroup": "KeyboardAlt",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
                     "isOptional": true,
                     "isOR": false
                 }

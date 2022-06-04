@@ -45,4 +45,9 @@ public class LaserBehaviour : MonoBehaviour, IInteractable
     {
         isTouchedOtherLaser = true;
     }
+
+    void IInteractable.StopInteraction(LaserBehaviour laser)
+    {
+        throw new System.NotImplementedException();
+    }
 }

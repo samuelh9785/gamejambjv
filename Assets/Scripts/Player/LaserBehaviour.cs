@@ -23,6 +23,8 @@ public class LaserBehaviour : MonoBehaviour, IInteractable
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        Debug.Log(collision.name);
+
         if (collision.CompareTag(PLAYER_TAG) || collision.CompareTag(INTERACTABLE_TAG))
             collision.GetComponent<IInteractable>().StopInteraction(this);
     }
@@ -38,7 +40,8 @@ public class LaserBehaviour : MonoBehaviour, IInteractable
 
     public void ResetLaser()
     {
-        transform.localScale = new Vector3(0, transform.localScale.y, 1);
+        currentSize = 0;
+        transform.localScale = new Vector3(Mathf.Lerp(transform.position.y, 0, Time.deltaTime), transform.localScale.y, 1);
     }
 
     public void Interaction(LaserBehaviour laser)

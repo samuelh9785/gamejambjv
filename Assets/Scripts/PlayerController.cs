@@ -32,16 +32,16 @@ public class PlayerController : MonoBehaviour
         moveInput = value.Get<Vector2>();
     }
 
-    void OnShoot()
-    {
+    //void OnShoot()
+    //{
         
-            Debug.Log("PERFORMED");
-    }
+    //        Debug.Log("PERFORMED");
+    //}
 
-    void OnShootRelease()
-    {
-        Debug.Log("RELEASE");
-    }
+    //void OnShootRelease()
+    //{
+    //    Debug.Log("RELEASE");
+    //}
 
 
 }

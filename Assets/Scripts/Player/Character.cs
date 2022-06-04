@@ -40,11 +40,11 @@ public class Character : MonoBehaviour
 
         laser.ResetLaser();
         timerLaser = 0;
-        return true;
+        return false;
     }
     
 
-    private void LateUpdate()
+    private void LateUpdate() 
     {
         if (otherPlayer == null) return;
 

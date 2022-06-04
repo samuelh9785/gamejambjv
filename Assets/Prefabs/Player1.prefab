@@ -52,7 +52,9 @@ MonoBehaviour:
   laser: {fileID: 3320590111022280514}
   playerInput: {fileID: 3904646819382830722}
   health: 3
+  startPosition: {fileID: 0}
   death: {x: 0, y: 0, z: 0}
+  normalState: {x: 1, y: 1, z: 1}
   decrement: {x: 0.7, y: 0.7, z: 0.7}
   timeChargeLaser: 2
 --- !u!114 &3904646819382830722
@@ -106,7 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveInput: {x: 0, y: 0}
-  moveSpeed: 2
+  moveSpeed: 4
   rb: {fileID: 72702562353724802}
 --- !u!50 &72702562353724802
 Rigidbody2D:
@@ -199,7 +201,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -25123439
+  m_SortingLayerID: 1543169683
   m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
@@ -252,7 +254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1981770001566306202, guid: 14d74ce1a90b87042be7c85edaf59bab, type: 3}
       propertyPath: m_SortingLayerID
-      value: -25123439
+      value: 1543169683
       objectReference: {fileID: 0}
     - target: {fileID: 3093691038296989044, guid: 14d74ce1a90b87042be7c85edaf59bab, type: 3}
       propertyPath: m_Name

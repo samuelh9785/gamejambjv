@@ -51,10 +51,12 @@ public class LaserBehaviour : MonoBehaviour, IInteractable
     public void Interaction(LaserBehaviour laser)
     {
         isTouchedOtherLaser = true;
+        Debug.Log("DOUBLELAZER");
     }
 
     void IInteractable.StopInteraction(LaserBehaviour laser)
     {
-        throw new System.NotImplementedException();
+        isTouchedOtherLaser = false;
+
     }
 }

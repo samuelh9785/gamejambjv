@@ -5,7 +5,12 @@ using UnityEngine;
 public class FinishLevel : MonoBehaviour
 {
     public Cristal[] allCristals;
+    public GameObject ending;
+    //public GameObject[] players;
+    //public CharacterSwitcher playerList;
     public bool allTouched;
+    public bool isInPosition;
+    private bool finishActive = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +25,8 @@ public class FinishLevel : MonoBehaviour
 
     public void checkCristal()
     {
+        if (finishActive) return;
+
         allTouched = true;
 
         for (int i = 0; i < allCristals.Length; i++)
@@ -31,7 +38,14 @@ public class FinishLevel : MonoBehaviour
             }
         }
 
-        if(allTouched)
+        if (allTouched)
+        {
+            finishActive = true;
+            ending.SetActive(true);
             Debug.Log("VICTOIRRREEEE");
+        }
+
     }
+
+   
 }

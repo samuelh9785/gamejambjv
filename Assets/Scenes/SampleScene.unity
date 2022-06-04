@@ -162,11 +162,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc1da29ca83d3e0459fcd9444d9a5936, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targets: []
+  _targets:
+  - {fileID: 0}
+  - {fileID: 0}
   offset: {x: 0, y: 0, z: -25}
   smoothValue: 0.5
-  maxZoom: 10
-  minZoom: 50
+  maxZoom: 3
+  minZoom: 20
   zoomLimiter: 50
 --- !u!20 &519420031
 Camera:

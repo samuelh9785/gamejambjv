@@ -51,7 +51,7 @@ public class CameraController : MonoBehaviour
         Bounds bound = new Bounds(targets[0].position, Vector3.zero);
         for (int i = 0; i < targets.Count; i++)
         {
-            bound.Encapsulate(targets[0].position);
+            bound.Encapsulate(targets[i].position);
         }
 
         float xSize = bound.size.x;
@@ -66,7 +66,7 @@ public class CameraController : MonoBehaviour
         Bounds bound = new Bounds(targets[0].position, Vector3.zero);
         for (int i = 0; i < targets.Count; i++)
         {
-            bound.Encapsulate(targets[0].position);
+            bound.Encapsulate(targets[i].position);
         }
 
         return bound.center;

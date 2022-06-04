@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Character : MonoBehaviour
+public class Character : MonoBehaviour, IInteractable
 {
     [SerializeField] private Transform otherPlayer = default;
     [SerializeField] private LaserBehaviour laser = default;
@@ -69,5 +69,15 @@ public class Character : MonoBehaviour
     {
         Debug.Log("test on release");
         isShooting = false;
+    }
+
+    public void Interaction(LaserBehaviour laser)
+    {
+        laser.isTouchedSomething = true;
+    }
+
+    public void StopInteraction(LaserBehaviour laser)
+    {
+        throw new System.NotImplementedException();
     }
 }

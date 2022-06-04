@@ -5,4 +5,6 @@ using UnityEngine;
 public interface IInteractable
 {
     public void Interaction(LaserBehaviour laser);
+
+    public void StopInteraction(LaserBehaviour laser);
 }

@@ -11,6 +11,11 @@ public class Wall : MonoBehaviour, IInteractable
         Debug.Log("MArche");
     }
 
+    void IInteractable.StopInteraction(LaserBehaviour laser)
+    {
+        throw new System.NotImplementedException();
+    }
+
     // Start is called before the first frame update
-    
+
 }

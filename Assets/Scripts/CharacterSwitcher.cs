@@ -9,6 +9,7 @@ public class CharacterSwitcher : MonoBehaviour
     public PlayerInputManager manager;
     public GameObject[] players;
     public InputActionAsset asset;
+    public CameraController cameraScript;
     //public UnityEvent<PlayerInput> unEvent = default;
     public int index = -1;
     // Start is called before the first frame update
@@ -17,26 +18,25 @@ public class CharacterSwitcher : MonoBehaviour
         
     }
 
-    
-    
-    public void OnSwitchCharacter()
+    void OnPlayerJoined()
     {
-        index = index + 1;
-        manager.playerPrefab = players[index];
-        
-        
-        Debug.Log("LETS GO");
+        if(manager.playerCount == 2)
+        {
+           GameObject[] currentPlayer = GameObject.FindGameObjectsWithTag("Player");
+            Debug.Log(currentPlayer.Length);
+            
+            for (int i = 0; i < currentPlayer.Length; i++)
+            {
+                cameraScript._targets.Add(currentPlayer[i].transform);
+
+            }
+
+            Character player1 = currentPlayer[0].GetComponent<Character>();
+            Character player2 = currentPlayer[1].GetComponent<Character>();
+
+            player1.OtherPlayer = player2.transform;
+            player2.OtherPlayer = player1.transform;
+        }
     }
 
-    /*public void OnSwitch(PlayerInput input)
-    {
-        manager.playerPrefab = players[index];
-        index = index + 1;
-    }
-
-    public void Move()
-    {
-        
-    }*/
-    
 }

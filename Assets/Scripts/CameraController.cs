@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] private List<Transform> targets = default;
+    public List<Transform> _targets = default;
 
     [Header("Parameter")]
     [SerializeField] private Vector3 offset = default;
@@ -24,7 +24,7 @@ public class CameraController : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (targets.Count == 0) return;
+        if (_targets.Count == 0) return;
 
         Move();
         Zoom();
@@ -48,10 +48,10 @@ public class CameraController : MonoBehaviour
 
     private float GreatDistanceOfTarget()
     {
-        Bounds bound = new Bounds(targets[0].position, Vector3.zero);
-        for (int i = 0; i < targets.Count; i++)
+        Bounds bound = new Bounds(_targets[0].position, Vector3.zero);
+        for (int i = 0; i < _targets.Count; i++)
         {
-            bound.Encapsulate(targets[i].position);
+            bound.Encapsulate(_targets[i].position);
         }
 
         float xSize = bound.size.x;
@@ -63,10 +63,10 @@ public class CameraController : MonoBehaviour
     private Vector3 GetCenterOfTargets()
     {
 
-        Bounds bound = new Bounds(targets[0].position, Vector3.zero);
-        for (int i = 0; i < targets.Count; i++)
+        Bounds bound = new Bounds(_targets[0].position, Vector3.zero);
+        for (int i = 0; i < _targets.Count; i++)
         {
-            bound.Encapsulate(targets[i].position);
+            bound.Encapsulate(_targets[i].position);
         }
 
         return bound.center;

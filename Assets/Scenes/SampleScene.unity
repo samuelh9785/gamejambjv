@@ -162,9 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc1da29ca83d3e0459fcd9444d9a5936, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targets:
-  - {fileID: 0}
-  - {fileID: 0}
+  _targets: []
   offset: {x: 0, y: 0, z: -25}
   smoothValue: 0.5
   maxZoom: 3
@@ -840,8 +838,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2578403403734195357, guid: 810675d0530daa9499e2c372b55e60ee, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7234233990318759050, guid: 810675d0530daa9499e2c372b55e60ee, type: 3}
       propertyPath: m_Name
+      value: Void
+      objectReference: {fileID: 0}
+    - target: {fileID: 7234233990318759050, guid: 810675d0530daa9499e2c372b55e60ee, type: 3}
+      propertyPath: m_TagString
       value: Void
       objectReference: {fileID: 0}
     - target: {fileID: 8739068960351173795, guid: 810675d0530daa9499e2c372b55e60ee, type: 3}
@@ -850,11 +856,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8739068960351173795, guid: 810675d0530daa9499e2c372b55e60ee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.4688352
+      value: -2.82
       objectReference: {fileID: 0}
     - target: {fileID: 8739068960351173795, guid: 810675d0530daa9499e2c372b55e60ee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.0457618
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 8739068960351173795, guid: 810675d0530daa9499e2c372b55e60ee, type: 3}
       propertyPath: m_LocalPosition.z

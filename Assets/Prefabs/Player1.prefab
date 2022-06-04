@@ -50,7 +50,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   otherPlayer: {fileID: 0}
   laser: {fileID: 3320590111022280514}
+  playerInput: {fileID: 3904646819382830722}
   health: 3
+  death: {x: 0, y: 0, z: 0}
+  decrement: {x: 0.7, y: 0.7, z: 0.7}
   timeChargeLaser: 2
 --- !u!114 &3904646819382830722
 MonoBehaviour:

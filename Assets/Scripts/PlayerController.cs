@@ -9,11 +9,11 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public Rigidbody2D rb;
     //public PlayerInput input;
-    public InputActionAsset inputAction;
+    
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.GetComponent<PlayerInput>().actions = inputAction;
+        
         //gameObject.GetComponent<PlayerInput>().actions = inputAction;
     }
 

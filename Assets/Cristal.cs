@@ -5,10 +5,12 @@ using UnityEngine;
 public class Cristal : MonoBehaviour , IInteractable
 {
     public bool isTouched;
+    public FinishLevel finish;
     public void Interaction(LaserBehaviour laser)
     {
         
         isTouched = true;
+        //finish.checkCristal();
     }
 
     public void StopInteraction(LaserBehaviour laser)

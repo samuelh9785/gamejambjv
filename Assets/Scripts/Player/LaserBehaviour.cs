@@ -7,7 +7,7 @@ public class LaserBehaviour : MonoBehaviour, IInteractable
     public static bool isTouchedOtherLaser = false;
     public bool isTouchedSomething = false;
     
-    [SerializeField] private float laserSpeed = 2f;
+    [SerializeField] private float laserSpeed = 10f;
     private float currentSize = 0;
 
     private const string PLAYER_TAG = "Player";
@@ -34,14 +34,18 @@ public class LaserBehaviour : MonoBehaviour, IInteractable
         if(!isTouchedOtherLaser && !isTouchedSomething)
         {
             transform.localScale = new Vector3(currentSize, transform.localScale.y, 1);
+            transform.localPosition = new Vector3(0, .2f);
             currentSize += Time.deltaTime * laserSpeed;
         }
     }
 
     public void ResetLaser()
     {
+        isTouchedSomething = false;
+        isTouchedOtherLaser = false;
         currentSize = 0;
         transform.localScale = new Vector3(Mathf.Lerp(transform.localScale.x, 0, Time.deltaTime * 5), transform.localScale.y, 1);
+        transform.localPosition = new Vector3(0, .2f);
     }
 
     public void Interaction(LaserBehaviour laser)

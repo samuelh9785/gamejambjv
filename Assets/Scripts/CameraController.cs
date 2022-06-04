@@ -10,8 +10,8 @@ public class CameraController : MonoBehaviour
     [Header("Parameter")]
     [SerializeField] private Vector3 offset = default;
     [SerializeField] private float smoothValue = 0.5f;
-    [SerializeField] private float maxZoom = 10f;
-    [SerializeField] private float minZoom = 50f;
+    [SerializeField] private float maxZoom = 1f;
+    [SerializeField] private float minZoom = 20f;
     [SerializeField] private float zoomLimiter = 50f;
 
     private Vector3 velocity;
@@ -35,7 +35,7 @@ public class CameraController : MonoBehaviour
     private void Zoom()
     {
         float newZoom = Mathf.Lerp(maxZoom, minZoom, GreatDistanceOfTarget() / zoomLimiter);
-        cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, newZoom, Time.deltaTime);
+        cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, newZoom, Time.deltaTime);
     }
 
     private void Move()

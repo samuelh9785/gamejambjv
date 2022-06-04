@@ -7,9 +7,10 @@ using UnityEngine.InputSystem;
 public class CharacterSwitcher : MonoBehaviour
 {
     public PlayerInputManager manager;
-    public List<GameObject> players = new List<GameObject>();
+    public GameObject[] players;
+    public InputActionAsset asset;
     //public UnityEvent<PlayerInput> unEvent = default;
-    public int index = 0;
+    public int index = -1;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +21,11 @@ public class CharacterSwitcher : MonoBehaviour
     
     public void OnSwitchCharacter()
     {
-        manager.playerPrefab = players[index];
         index = index + 1;
+        manager.playerPrefab = players[index];
+        
+        
+        Debug.Log("LETS GO");
     }
 
     /*public void OnSwitch(PlayerInput input)

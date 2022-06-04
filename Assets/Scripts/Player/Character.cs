@@ -11,6 +11,12 @@ public class Character : MonoBehaviour
     [SerializeField] private float timeChargeLaser = 2f;
     [SerializeField] private float laserSpeed = 2f;
 
+    public Transform OtherPlayer
+    {
+        get => otherPlayer;
+        set => otherPlayer = value;
+    }
+
     private float timerLaser;
     private bool isShooting = false;
     private float currentSize = 0;

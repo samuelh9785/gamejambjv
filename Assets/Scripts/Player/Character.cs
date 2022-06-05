@@ -10,6 +10,11 @@ public class Character : MonoBehaviour, IInteractable
     [SerializeField] private PlayerInput playerInput = default;
     public int health = 3;
     public Transform startPosition;
+    public bool inTheEnd;
+    
+    public bool ending;
+    public bool inAOERange;
+    //public GameObject[] players;
     public Vector3 death = new Vector3(0,0,0);
     public Vector3 normalState = new Vector3(1, 1, 1);
     public Vector3 decrement = new Vector3(0.7f, 0.7f, 0.7f);
@@ -80,11 +85,13 @@ public class Character : MonoBehaviour, IInteractable
     public void Interaction(LaserBehaviour laser)
     {
         laser.isTouchedSomething = true;
+        transform.position += laser.transform.up;
+        Debug.Log("PUSH");
     }
 
     public void StopInteraction(LaserBehaviour laser)
     {
-        throw new System.NotImplementedException();
+        laser.isTouchedSomething = true;
     }
 
     private Coroutine fall;
@@ -103,7 +110,34 @@ public class Character : MonoBehaviour, IInteractable
             fall = StartCoroutine(OnFall());
                 
         }
+
+        if(collision.gameObject.tag == "Finish")
+        {
+            //ending = true;
+            //players = GameObject.FindGameObjectsWithTag("Player");
+
+            //for (int i = 0; i < players.Length; i++)
+            //{
+            //    if (players[i].GetComponent<Character>().inTheEnd == false)
+            //    {
+            //        ending = false;
+
+            //    }
+            //}
+            //if (ending)
+            inTheEnd = true;
+                Debug.Log("WINNNNNNNN");
+            
+            
+        }
+        
+
     }
+
+    
+
+
+
 
     IEnumerator OnFall()
     {

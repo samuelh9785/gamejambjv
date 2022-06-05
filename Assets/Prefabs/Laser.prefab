@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4570437131088924018}
   - component: {fileID: 4987587120628979801}
   - component: {fileID: 5703573673886216634}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Laser
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b9bde5810b5bc44823ee89bf6dd916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTouchedOtherLaser: 0
   isTouchedSomething: 0
   laserSpeed: 10
 --- !u!61 &5703573673886216634
@@ -83,9 +84,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4558869269091116533}
   - component: {fileID: 1981770001566306202}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Renderer
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

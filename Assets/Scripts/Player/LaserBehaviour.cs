@@ -34,7 +34,7 @@ public class LaserBehaviour : MonoBehaviour, IInteractable
         if(!isTouchedOtherLaser && !isTouchedSomething)
         {
             transform.localScale = new Vector3(currentSize, transform.localScale.y, 1);
-            transform.localPosition = new Vector3(0, .2f);
+            transform.localPosition = new Vector3(0, .4f);
             currentSize += Time.deltaTime * laserSpeed;
         }
     }
@@ -45,7 +45,7 @@ public class LaserBehaviour : MonoBehaviour, IInteractable
         isTouchedOtherLaser = false;
         currentSize = 0;
         transform.localScale = new Vector3(Mathf.Lerp(transform.localScale.x, 0, Time.deltaTime * 5), transform.localScale.y, 1);
-        transform.localPosition = new Vector3(0, .2f);
+        transform.localPosition = new Vector3(0, .4f);
     }
 
     public void Interaction(LaserBehaviour laser)

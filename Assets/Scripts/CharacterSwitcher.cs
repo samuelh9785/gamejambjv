@@ -22,13 +22,12 @@ public class CharacterSwitcher : MonoBehaviour
     {
         if(manager.playerCount == 2)
         {
-           GameObject[] currentPlayer = GameObject.FindGameObjectsWithTag("Player");
-            Debug.Log(currentPlayer.Length);
+            Debug.Log("Player Joined");
+            GameObject[] currentPlayer = GameObject.FindGameObjectsWithTag("Player");
             
             for (int i = 0; i < currentPlayer.Length; i++)
             {
                 cameraScript._targets.Add(currentPlayer[i].transform);
-
             }
 
             Character player1 = currentPlayer[0].GetComponent<Character>();

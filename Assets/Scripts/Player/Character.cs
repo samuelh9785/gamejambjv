@@ -72,13 +72,11 @@ public class Character : MonoBehaviour, IInteractable
 
     void OnShoot()
     {
-        Debug.Log("test on press");
         isShooting = true;
     }
 
     void OnShootRelease()
     {
-        Debug.Log("test on release");
         isShooting = false;
     }
 

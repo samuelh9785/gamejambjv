@@ -19,9 +19,11 @@ public class AOE : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
-        if (other.tag == "Player")
+
+
+        if (other.CompareTag("PlayerCollider"))
         {
+        Debug.Log("CheckEnter");
             Debug.Log(other.name);
             tNT.inRange = true;
             tNT.playerInRange = other.gameObject;
@@ -29,10 +31,12 @@ public class AOE : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("PlayerCollider"))
         {
             tNT.inRange = false;
-           
+            tNT.playerInRange = null;
+
+
         }
     }
 }

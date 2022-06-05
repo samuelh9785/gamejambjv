@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    private List<Level> levels = default;
+    [SerializeField] private List<Level> levels = default;
     private int currentLevel = 0;
 
     private static GameManager _instance;
@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
         levels[currentLevel].gameObject.SetActive(false);
         currentLevel++;
 
-        if (levels.Count >= currentLevel)
+        if (levels.Count - 1 >= currentLevel)
         {
             levels[currentLevel].gameObject.SetActive(true);
         }   

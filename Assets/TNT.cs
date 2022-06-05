@@ -7,6 +7,7 @@ public class TNT : MonoBehaviour, IInteractable
     public bool explode;
     public GameObject playerInRange;
     public bool inRange;
+
     public void Interaction(LaserBehaviour laser)
     {
         this.GetComponent<BoxCollider2D>().enabled = false;
@@ -24,18 +25,12 @@ public class TNT : MonoBehaviour, IInteractable
        
     }
 
-    
-
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (collision.CompareTag("Player"))
+        {
+            Debug.Log("Player");
+        }
     }
 
 }

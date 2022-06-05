@@ -7,7 +7,29 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private Song[] allSong = default;
     private AudioSource audioSource;
 
-    private void PlaySong(string songName)
+    private static AudioManager _instance;
+    public static AudioManager Instance => _instance;
+
+    private void Awake()
+    {
+        if(_instance != null)
+        {
+            Destroy(this);
+            return;
+        }
+
+        _instance = this;
+    }
+
+    private void OnDestroy()
+    {
+        if(_instance != null)
+        {
+            _instance = null;
+        }
+    }
+
+    public void PlaySongOneShot(string songName)
     {
         for (int i = 0; i < allSong.Length; i++)
         {
@@ -19,5 +41,10 @@ public class AudioManager : MonoBehaviour
                 return;
             }
         }
+    }
+
+    public void StopSong(string songName)
+    {
+        audioSource.Stop();
     }
 }

@@ -21,6 +21,14 @@ public class GameManager : MonoBehaviour
 
         _instance = this;
     }
+
+    private void OnDestroy()
+    {
+        if (_instance != null)
+        {
+            _instance = null;
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {

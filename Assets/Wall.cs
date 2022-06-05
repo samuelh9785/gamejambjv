@@ -13,7 +13,7 @@ public class Wall : MonoBehaviour, IInteractable
 
     void IInteractable.StopInteraction(LaserBehaviour laser)
     {
-        throw new System.NotImplementedException();
+        laser.isTouchedSomething = false;
     }
 
     // Start is called before the first frame update

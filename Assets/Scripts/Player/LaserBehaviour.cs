@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LaserBehaviour : MonoBehaviour, IInteractable
 {
-    public static bool isTouchedOtherLaser = false;
+    public bool isTouchedOtherLaser = false;
     public bool isTouchedSomething = false;
     
     [SerializeField] private float laserSpeed = 10f;

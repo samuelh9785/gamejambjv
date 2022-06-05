@@ -6,15 +6,16 @@ TagManager:
   tags:
   - Interactable
   - Void
+  - TNT
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Laser
   - Water
   - UI
-  - 
-  - 
+  - InteractibleWithLaser
+  - InteractibleWithPlayerOnly
   - 
   - 
   - 

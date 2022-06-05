@@ -11,7 +11,9 @@ public class Character : MonoBehaviour, IInteractable
     public int health = 3;
     public Transform startPosition;
     public bool inTheEnd;
+    
     public bool ending;
+    public bool inAOERange;
     //public GameObject[] players;
     public Vector3 death = new Vector3(0,0,0);
     public Vector3 normalState = new Vector3(1, 1, 1);
@@ -127,7 +129,14 @@ public class Character : MonoBehaviour, IInteractable
             
             
         }
+        
+
     }
+
+    
+
+
+
 
     IEnumerator OnFall()
     {

@@ -53,6 +53,9 @@ MonoBehaviour:
   playerInput: {fileID: 3904646819382830722}
   health: 3
   startPosition: {fileID: 0}
+  inTheEnd: 0
+  ending: 0
+  inAOERange: 0
   death: {x: 0, y: 0, z: 0}
   normalState: {x: 1, y: 1, z: 1}
   decrement: {x: 0.7, y: 0.7, z: 0.7}
@@ -142,9 +145,10 @@ GameObject:
   - component: {fileID: 6725005658293494900}
   - component: {fileID: 6725005658293494903}
   - component: {fileID: 6725005658293494901}
-  m_Layer: 0
+  - component: {fileID: 967725215025044014}
+  m_Layer: 7
   m_Name: Player1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -241,6 +245,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &967725215025044014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6725005658293494902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fcff9a9d58e9d04d8a1dbf89188d2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 6725005658048509922}
 --- !u!1001 &7719841645852571419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -266,11 +283,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4570437131088924018, guid: 14d74ce1a90b87042be7c85edaf59bab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.002
       objectReference: {fileID: 0}
     - target: {fileID: 4570437131088924018, guid: 14d74ce1a90b87042be7c85edaf59bab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2
+      value: 1.026
       objectReference: {fileID: 0}
     - target: {fileID: 4570437131088924018, guid: 14d74ce1a90b87042be7c85edaf59bab, type: 3}
       propertyPath: m_LocalPosition.z

@@ -2,27 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cristal : MonoBehaviour , IInteractable
+public class TNT : MonoBehaviour, IInteractable
 {
-    public bool isTouched;
-    public FinishLevel finish;
+    public bool explode;
+    public GameObject playerInRange;
+    public bool inRange;
     public void Interaction(LaserBehaviour laser)
     {
-        //if (shake != null) shake.Stop().Reset().Play();
-        //else shake = new Shake(this, child, shakeSetting, true).Play();
-        if (laser.isTouchedOtherLaser)
+        this.GetComponent<BoxCollider2D>().enabled = false;
+        if(inRange == true)
         {
-            isTouched = true;
+            playerInRange.GetComponentInParent<Character>().health = playerInRange.GetComponentInParent<Character>().health - 2;
+            Debug.Log("Zouhhhh");
         }
         
-        //finish.checkCristal();
+        
     }
 
     public void StopInteraction(LaserBehaviour laser)
     {
-        
-        isTouched = false;
+       
     }
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -35,4 +37,5 @@ public class Cristal : MonoBehaviour , IInteractable
     {
         
     }
+
 }

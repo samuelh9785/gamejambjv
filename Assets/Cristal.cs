@@ -13,7 +13,7 @@ public class Cristal : MonoBehaviour , IInteractable
         if (laser.isTouchedOtherLaser)
         {
             isTouched = true;
-            AudioManager.Instance.PlaySongOneShot("crystal");
+            //AudioManager.Instance.PlaySongOneShot("crystal");
         }
         
         //finish.checkCristal();

@@ -1702,6 +1702,10 @@ PrefabInstance:
       propertyPath: allCristals.Array.data[2]
       value: 
       objectReference: {fileID: 7171136718024615150}
+    - target: {fileID: 7533196747083304331, guid: 52f06557c657a2840b0c0df21a18d8a2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52f06557c657a2840b0c0df21a18d8a2, type: 3}
 --- !u!4 &6059515463883113946 stripped

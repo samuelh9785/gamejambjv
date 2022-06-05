@@ -20,8 +20,10 @@ public class TNT : MonoBehaviour, IInteractable
             for(int i =0; i < objectInRange.Count; i++)
             {
                 objectInRange[i].SetActive(false);
+                
             }
-            Debug.Log("Zouhhhh");
+        gameObject.SetActive(false);
+        Debug.Log("Zouhhhh");
         
         
     }

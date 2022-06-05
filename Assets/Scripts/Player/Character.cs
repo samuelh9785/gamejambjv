@@ -96,7 +96,7 @@ public class Character : MonoBehaviour, IInteractable
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Void")
+        if (collision.gameObject.tag == "Void" && tag == "Player")
         {
             //collision.gameObject.GetComponent<Character>().health = collision.gameObject.GetComponent<Character>().health - 1;
             health = health - 1;

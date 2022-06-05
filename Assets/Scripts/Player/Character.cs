@@ -101,9 +101,10 @@ public class Character : MonoBehaviour, IInteractable
             //collision.gameObject.GetComponent<Character>().health = collision.gameObject.GetComponent<Character>().health - 1;
             health = health - 1;
             Debug.Log("HIT!!!");
-
+            laser.ResetLaser();
+            timerLaser = 0;
             playerInput.DeactivateInput();
-
+            
             if (fall != null) StopCoroutine(fall);
             fall = StartCoroutine(OnFall());
                 
@@ -123,6 +124,7 @@ public class Character : MonoBehaviour, IInteractable
             //    }
             //}
             //if (ending)
+            laser.ResetLaser();
             inTheEnd = true;
                 Debug.Log("WINNNNNNNN");
             

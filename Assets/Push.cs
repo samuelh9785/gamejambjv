@@ -21,7 +21,7 @@ public class Push : MonoBehaviour
     {
         if (other.gameObject.tag  == "Interactable")
         {
-            parent.transform.position += other.transform.right;
+            parent.transform.position += other.transform.right * Time.deltaTime * 10;
             Debug.Log(parent);
             
         }

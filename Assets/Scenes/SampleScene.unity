@@ -683,6 +683,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3591003122183391506, guid: 2bc57fd24b0c1d34ba314bea5264bbea, type: 3}
+      propertyPath: m_TagString
+      value: Void
+      objectReference: {fileID: 0}
     - target: {fileID: 3680536213948974232, guid: 2bc57fd24b0c1d34ba314bea5264bbea, type: 3}
       propertyPath: m_Name
       value: Level2
@@ -888,7 +892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2973225463928904171, guid: 8c42e20dddd22da4bb34a2d2c3536b5b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2973225463928904173, guid: 8c42e20dddd22da4bb34a2d2c3536b5b, type: 3}
       propertyPath: m_RootOrder

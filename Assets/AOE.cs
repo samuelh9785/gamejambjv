@@ -26,17 +26,17 @@ public class AOE : MonoBehaviour
         Debug.Log("CheckEnter");
             Debug.Log(other.name);
             tNT.inRange = true;
-            tNT.playerInRange = other.gameObject;
+            tNT.player = other.gameObject;
         }
+
+
     }
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("PlayerCollider"))
         {
             tNT.inRange = false;
-            tNT.playerInRange = null;
-
-
+            tNT.player = null;
         }
     }
 }

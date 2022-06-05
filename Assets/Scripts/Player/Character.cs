@@ -13,6 +13,7 @@ public class Character : MonoBehaviour, IInteractable
     public Vector3 death = new Vector3(0,0,0);
     public Vector3 normalState = new Vector3(1, 1, 1);
     public Vector3 decrement = new Vector3(0.7f, 0.7f, 0.7f);
+    public Vector3 spawnPos = default;
     [SerializeField] private float timeChargeLaser = 2f;
     
 
@@ -112,7 +113,7 @@ public class Character : MonoBehaviour, IInteractable
             gameObject.transform.localScale -= decrement * Time.deltaTime;
             yield return null;
         }
-        gameObject.transform.position = new Vector3(0,0,0);
+        gameObject.transform.position = spawnPos;
         gameObject.transform.localScale = normalState;
         playerInput.ActivateInput();
     }

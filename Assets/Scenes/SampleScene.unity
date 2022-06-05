@@ -865,6 +865,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Interactable
       objectReference: {fileID: 0}
+    - target: {fileID: 7863753989409087728, guid: 86b858665e6e93c4ca8632fecc7f8f3d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86b858665e6e93c4ca8632fecc7f8f3d, type: 3}
 --- !u!1001 &2973225463745366576

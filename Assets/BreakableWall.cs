@@ -7,23 +7,14 @@ public class BreakableWall : MonoBehaviour, IInteractable
     
     public void Interaction(LaserBehaviour laser)
     {
-        this.GetComponent<BoxCollider2D>().enabled = false;
+        laser.isTouchedSomething = true;
     }
 
     public void StopInteraction(LaserBehaviour laser)
     {
-        
+        laser.isTouchedSomething = false;
     }
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }

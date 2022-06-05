@@ -5,17 +5,23 @@ using UnityEngine;
 public class TNT : MonoBehaviour, IInteractable
 {
     public bool explode;
-    public GameObject playerInRange;
+    public GameObject player;
+    public List<GameObject> objectInRange = new List<GameObject>();
     public bool inRange;
+    public int life;
 
     public void Interaction(LaserBehaviour laser)
     {
         this.GetComponent<BoxCollider2D>().enabled = false;
         if(inRange == true)
         {
-            playerInRange.GetComponentInParent<Character>().health = playerInRange.GetComponentInParent<Character>().health - 2;
-            Debug.Log("Zouhhhh");
+
         }
+            for(int i =0; i < objectInRange.Count; i++)
+            {
+                objectInRange[i].SetActive(false);
+            }
+            Debug.Log("Zouhhhh");
         
         
     }

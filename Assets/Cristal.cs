@@ -10,6 +10,7 @@ public class Cristal : MonoBehaviour , IInteractable
     {
         //if (shake != null) shake.Stop().Reset().Play();
         //else shake = new Shake(this, child, shakeSetting, true).Play();
+        if(laser.isTouchedOtherLaser)
             isTouched = true;
         
         //finish.checkCristal();
